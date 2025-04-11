@@ -1,0 +1,11 @@
+{
+    "mcpServers" : {
+        "sogis-mcp" : {
+            "command" : "/Users/stefan/.sdkman/candidates/java/21.0.4-graal/bin/java",
+            "args" : [
+                "-jar",
+                "/Users/stefan/sources/sogis-mcp-poc/build/libs/sogis-mcp-poc-0.0.1-SNAPSHOT.jar"
+            ]
+        } 
+    }
+}
