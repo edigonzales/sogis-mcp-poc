@@ -24,8 +24,8 @@ public class SogisMcpPocApplication {
     }
     
     @Bean
-    public List<ToolCallback> sogisTools(GemeindeService gemeindeService) {
-        return List.of(ToolCallbacks.from(gemeindeService));
+    public List<ToolCallback> sogisTools(GemeindeService gemeindeService, IsosService isosService) {
+        return List.of(ToolCallbacks.from(gemeindeService, isosService));
     }
 
     @Bean
@@ -64,10 +64,11 @@ public class SogisMcpPocApplication {
 
     // for testing purposes
     @Bean
-    public CommandLineRunner startup(GemeindeService gemeindeService) {
+    public CommandLineRunner startup(GemeindeService gemeindeService, IsosService isosService) {
 
         return args -> {
             //System.out.println(gemeindeService.getGemeinden());
+            //System.out.println(isosService.getIsos());
         };
     }
 }
