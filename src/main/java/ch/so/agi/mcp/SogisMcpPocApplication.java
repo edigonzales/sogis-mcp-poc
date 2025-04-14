@@ -24,8 +24,12 @@ public class SogisMcpPocApplication {
     }
     
     @Bean
-    public List<ToolCallback> sogisTools(GemeindeService gemeindeService, IsosService isosService) {
-        return List.of(ToolCallbacks.from(gemeindeService, isosService));
+    public List<ToolCallback> sogisTools(
+            GemeindeService gemeindeService, 
+            IsosService isosService,
+            GrundstueckService grundstueckService,
+            OerebService oerebService) {
+        return List.of(ToolCallbacks.from(gemeindeService, isosService, grundstueckService, oerebService));
     }
 
     @Bean
@@ -64,11 +68,17 @@ public class SogisMcpPocApplication {
 
     // for testing purposes
     @Bean
-    public CommandLineRunner startup(GemeindeService gemeindeService, IsosService isosService) {
+    public CommandLineRunner startup(
+            GemeindeService gemeindeService, 
+            IsosService isosService,
+            GrundstueckService grundstueckService,
+            OerebService oerebService) {
 
         return args -> {
             //System.out.println(gemeindeService.getGemeinden());
             //System.out.println(isosService.getIsos());
+            //System.out.println(grundstueckService.getGrundstueckByNumberAndMunicipality("100", "Grenchen"));
+            //System.out.println(oerebService.getOerebByEgrid("CH184432067379"));
         };
     }
 }

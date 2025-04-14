@@ -15,6 +15,32 @@ Verwende für diese Frage bitte die offizielle Datenbank.
 
 ```
 
+----------------------------------------------
+
+```
+Gibt es in Grenchen ISOS?
+```
+
+```
+Und in Messen?
+```
+
+```
+Gibt es auch ISOS in Kiburg?
+```
+
+----------------------------------------------
+
+
+```
+Was ist der EGRID des Grundstückes 4497 in Grenchen?
+```
+
+```
+Von welchen ÖREB ist das Grundstück 4497 in Grenchen betroffen?
+Gibt es in Messen ISOS?
+```
+
 ## dev
 
 
@@ -46,4 +72,10 @@ Nutzungsplanung:
 
 ```
 java -jar /Users/stefan/apps/ili2pg-5.3.0/ili2pg-5.3.0.jar --dbhost localhost --dbport 54322 --dbdatabase pub --dbusr ddluser --dbpwd ddluser --strokeArcs --nameByTopic --disableValidation --defaultSrsCode 2056 --createFk --createFkIdx --createGeomIdx --models SO_ARP_Nutzungsplanung_Publikation_20201005 --dbschema arp_nutzungsplanung_pub_v1 --doSchemaImport --import ilidata:2546.ch.so.arp.nutzungsplanung.kommunal
+```
+
+Amtliche Vermessung:
+
+```
+java -jar /Users/stefan/apps/ili2pg-5.3.0/ili2pg-5.3.0.jar --dbhost localhost --dbport 54322 --dbdatabase pub --dbusr ddluser --dbpwd ddluser --strokeArcs --nameByTopic --disableValidation --defaultSrsCode 2056 --createFk --createFkIdx --createGeomIdx --models SO_AGI_MOpublic_20240711 --dbschema agi_mopublic_v1 --doSchemaImport --import ilidata:2546.ch.so.agi.av.mopublic
 ```
